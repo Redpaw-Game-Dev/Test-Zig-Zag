@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86302fefd93c4249bdc0bbc02ec2553b, type: 3}
+  m_Name: New Base Scenes Config
+  m_EditorClassIdentifier: 
+  _baseScenes:
+  - m_AssetGUID: 41dee4457c5a4944da4b42e35d9cd300
+    m_SubObjectName: 
+    m_SubObjectType: 
+  - m_AssetGUID: 362ab280b0a42ae4b816b74e49f4c0a7
+    m_SubObjectName: 
+    m_SubObjectType: 
+  - m_AssetGUID: cc5f9eb8f7ebd1e4f863560cdea3294a
+    m_SubObjectName: 
+    m_SubObjectType: 
+  - m_AssetGUID: a6000aeae939a0142b518d550ec7a76f
+    m_SubObjectName: 
+    m_SubObjectType: 

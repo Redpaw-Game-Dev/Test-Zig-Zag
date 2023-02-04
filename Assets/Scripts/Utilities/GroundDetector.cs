@@ -1,4 +1,5 @@
 ﻿using System;
+using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using TestZigZag.Abstraction;
@@ -8,10 +9,11 @@ namespace TestZigZag.Utilities
 {
     public class GroundDetector : SerializedMonoBehaviour
     {
+        [SerializeField] private Transform _transform;
+        [SerializeField] private Vector3 _halfExtents;
+        [SerializeField] private Vector3 _centerOffset;
         [SerializeField] private LayerMask _groundMask;
-        [SerializeField] private float _rayLength = 0.1f;
-        [SerializeField] private float _checkTime = 0.1f;
-        [SerializeField] private bool _initialValue;
+        [SerializeField] private float _scanFrequency = 0.1f;
         [SerializeField] private Task[] _onGroundedChangedTasks = new Task[0];
         
         private bool _isGrounded;
@@ -30,41 +32,29 @@ namespace TestZigZag.Utilities
 
         public event Action<bool> OnGroundedChanged;
 
-        private void Awake()
-        {
-            // IsGrounded = _initialValue;
-        }
-
         private void Start()
         {
             CheckGround();
         }
-
-        private void FixedUpdate()
+        
+        private async void CheckGround()
         {
-            if (_timer >= _checkTime)
+            while (true)
             {
-                _timer = 0f;
-                CheckGround();
+                Vector3 center = _transform.position + _centerOffset;
+                var colliders = Physics.OverlapBox(center, _halfExtents, Quaternion.identity, _groundMask);
+                
+                if (colliders.Length > 0)
+                {
+                    if (!_isGrounded) IsGrounded = true;
+                }
+                else if(_isGrounded)
+                {
+                    IsGrounded = false;
+                }
+                await UniTask.Delay(TimeSpan.FromSeconds(_scanFrequency), cancellationToken: this.GetCancellationTokenOnDestroy());
             }
-            _timer += Time.fixedDeltaTime;
-        }
-
-        private void CheckGround()
-        {
-            var position = transform.position;
-            Ray ray = new Ray(position, position + -transform.up);
-            Debug.DrawRay(position, -transform.up * _rayLength, Color.yellow, 1f);
-            // Debug.Log($"Raycast {Physics.Raycast(ray, _rayLength, _groundMask)}");
-            if (_isGrounded && !Physics.Raycast(ray, _rayLength, _groundMask))
-            {
-                IsGrounded = false;
-            }
-            else if (!_isGrounded && Physics.Raycast(ray, _rayLength, _groundMask))
-            {
-                IsGrounded = true;
-            }
-            // Debug.Log($"Grounded {_isGrounded}");
+            
         }
     }
 }

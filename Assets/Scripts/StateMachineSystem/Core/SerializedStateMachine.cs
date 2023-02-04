@@ -68,7 +68,7 @@ namespace TestZigZag.StateMachineSystem
         private Transition TryGetTransition()
         {
             Transition result = _anyTransitions.FirstOrDefault(transition => transition.IsPossible());
-            if (result == null && _currentState != null/* && _transitions.ContainsKey(_currentState.GetType())*/)
+            if (result == null && _currentState != null && _transitions.ContainsKey(_currentState.GetType()))
             {
                 result = _transitions[_currentState.GetType()].FirstOrDefault(transition => transition.IsPossible());
             }

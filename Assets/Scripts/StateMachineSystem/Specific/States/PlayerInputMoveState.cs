@@ -1,4 +1,5 @@
 ﻿using Sirenix.Serialization;
+using Sirenix.Utilities;
 using TestZigZag.Abstraction;
 using TestZigZag.Input;
 using UnityEngine;
@@ -8,6 +9,7 @@ namespace TestZigZag.StateMachineSystem
 {
     public class PlayerInputMoveState : State
     {
+        [OdinSerialize] private Task[] _onTurnTasks;
         [OdinSerialize] private Ball _ball;
         [OdinSerialize] private Rigidbody _ballRigidbody;
         [OdinSerialize] private ILabel _statsLabel;
@@ -26,6 +28,7 @@ namespace TestZigZag.StateMachineSystem
         private void TurnPlayer()
         {
             _currentDirection = _currentDirection == Vector3.right ? Vector3.forward : Vector3.right;
+            _onTurnTasks.ForEach(task => task.Do());
         }
 
         protected override void EnterActions()

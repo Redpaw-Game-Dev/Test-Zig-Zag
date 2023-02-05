@@ -1,12 +1,11 @@
 ﻿using TestZigZag.Input;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Zenject;
 
 namespace TestZigZag.UI
 {
-    public class SwitchModeButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+    public class SwitchModeButton : Button
     {
         [SerializeField] private Slider _slider;
 
@@ -17,15 +16,10 @@ namespace TestZigZag.UI
             _slider.value = _slider.minValue;
         }
 
-        public void OnPointerDown(PointerEventData eventData)
+        protected override void Click()
         {
             _slider.value = _slider.value == _slider.minValue ? _slider.maxValue : _slider.minValue;
             _inputManager.SwitchMode();
-        }
-
-        public void OnPointerUp(PointerEventData eventData)
-        {
-            
         }
     }
 }

@@ -236,6 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db296d42a7e84e849a4aa7df0d62e7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _clickAudio: {fileID: 0}
 --- !u!1 &1844826256852614259
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,3 +430,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4ac2291b27641f38da4fdc05830716f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _clickAudio: {fileID: 0}

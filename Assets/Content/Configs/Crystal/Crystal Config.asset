@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _platformsControllerId: PlatformsController
   _crystalPrefab: {fileID: 8132305517294030531, guid: 1757af2f770ed2243bd5a603508c7ed8, type: 3}
-  _spawnChance: 0.3
+  _spawnChance: 0.35

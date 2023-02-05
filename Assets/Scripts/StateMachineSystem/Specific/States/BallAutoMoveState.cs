@@ -25,7 +25,6 @@ namespace TestZigZag.StateMachineSystem
         
         protected override void Initialize()
         {
-            _currentDirection = Vector3.right;
             _speed = _ball.GetFeature<SpeedFeature>(_statsLabel) as SpeedFeature;
         }
 
@@ -54,6 +53,7 @@ namespace TestZigZag.StateMachineSystem
 
         protected override void EnterActions()
         {
+            _currentDirection = Vector3.right;
             _ballRigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
             Scan();
         }

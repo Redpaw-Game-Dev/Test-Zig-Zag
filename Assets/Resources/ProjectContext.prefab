@@ -119,6 +119,7 @@ Transform:
   - {fileID: 2596815821363855444}
   - {fileID: 5633961347849677132}
   - {fileID: 7275267331062022320}
+  - {fileID: 2654537665432314335}
   - {fileID: 6020911480867836108}
   m_Father: {fileID: 8355918106937887965}
   m_RootOrder: 0
@@ -174,6 +175,7 @@ MonoBehaviour:
   - {fileID: 6214379876429840722}
   - {fileID: 5372621819921384423}
   - {fileID: 7045963150332688560}
+  - {fileID: 7690463584017718415}
   - {fileID: 7817150577343811621}
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 1
@@ -262,7 +264,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4710824999885779135}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7817150577343811621
 MonoBehaviour:
@@ -277,6 +279,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _baseScenesConfig: {fileID: 11400000, guid: 7b2a31ab7be36f84eb7be00642075a51, type: 2}
+--- !u!1 &8164186617345221776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2654537665432314335}
+  - component: {fileID: 7690463584017718415}
+  m_Layer: 0
+  m_Name: Crystal Manager Installer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2654537665432314335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164186617345221776}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4710824999885779135}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7690463584017718415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164186617345221776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611cc6aed63e438381445479992d1972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _crystalConfig: {fileID: 11400000, guid: 995cddb407e927447b9fcc98899f95c0, type: 2}
 --- !u!1 &8982044365813911849
 GameObject:
   m_ObjectHideFlags: 0

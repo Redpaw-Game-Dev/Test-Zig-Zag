@@ -1,11 +1,12 @@
 ﻿using System;
 using TestZigZag.Abstraction;
+using TestZigZag.CrystalManagement;
 using TestZigZag.Game;
 using TestZigZag.ObjectsManagement;
 using Zenject;
 using Object = UnityEngine.Object;
 
-namespace ScoreManagement
+namespace TestZigZag.ScoreManagement
 {
     public class ScoreManager : IInitializable
     {
@@ -38,11 +39,17 @@ namespace ScoreManagement
         public event Action<int> OnBestScoreChanged; 
 
         [Inject]
-        private void Construct(string ballId, ObjectsManager objectsManager, GameManager gameManager)
+        private void Construct(string ballId, ObjectsManager objectsManager, GameManager gameManager, CrystalManager crystalManager)
         {
             _ball = objectsManager.GetObject<Ball>(ballId, GetBallCallback);
             gameManager.OnGameStarted += HandleGameStarted;
             gameManager.OnGameEnded += HandleGameEnded;
+            crystalManager.OnCrystalCollected += HandleCrystalCollected;
+        }
+
+        private void HandleCrystalCollected(int points)
+        {
+            Score += points;
         }
 
         public void Initialize()

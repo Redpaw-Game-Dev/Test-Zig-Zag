@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Zenject;
 
-namespace ScoreManagement
+namespace TestZigZag.ScoreManagement
 {
     public class ScoreManagerInstaller : MonoInstaller
     {

@@ -1,5 +1,5 @@
 ﻿using System;
-using ScoreManagement;
+using TestZigZag.ScoreManagement;
 using TMPro;
 using UnityEngine;
 using Zenject;

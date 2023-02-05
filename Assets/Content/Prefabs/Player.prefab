@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 8294395188205989218}
   - component: {fileID: 8294395188205989219}
   - component: {fileID: 8294395188205989216}
+  - component: {fileID: 2524613278962256349}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -346,6 +347,7 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 8294395188205989246}
     - {fileID: 8294395188205989247}
+    - {fileID: 2524613278962256349}
     - {fileID: 8294395188205989244}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -423,13 +425,22 @@ MonoBehaviour:
       Data: 7|TestZigZag.Abstraction.Task[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 8|TestZigZag.Abstraction.CallBallTurnEvent, Assembly-CSharp
     - Name: _ball
       Entry: 10
       Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|TestZigZag.Abstraction.PlaySoundTask, Assembly-CSharp
+    - Name: _audioSource
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -447,7 +458,7 @@ MonoBehaviour:
       Data: 0
     - Name: _statsLabel
       Entry: 7
-      Data: 9|TestZigZag.Abstraction.StatsLabel, Assembly-CSharp
+      Data: 10|TestZigZag.Abstraction.StatsLabel, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -456,16 +467,16 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 10|TestZigZag.StateMachineSystem.DeathState, Assembly-CSharp
+      Data: 11|TestZigZag.StateMachineSystem.DeathState, Assembly-CSharp
     - Name: _onEnterTasks
       Entry: 7
-      Data: 11|TestZigZag.Abstraction.Task[], Assembly-CSharp
+      Data: 12|TestZigZag.Abstraction.Task[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 12|TestZigZag.Abstraction.CallBallDeathEvent, Assembly-CSharp
+      Data: 13|TestZigZag.Abstraction.CallBallDeathEvent, Assembly-CSharp
     - Name: _ball
       Entry: 10
       Data: 1
@@ -480,7 +491,7 @@ MonoBehaviour:
       Data: 
     - Name: _onExitTasks
       Entry: 7
-      Data: 13|TestZigZag.Abstraction.Task[], Assembly-CSharp
+      Data: 14|TestZigZag.Abstraction.Task[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 0
@@ -495,20 +506,8 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 14|TestZigZag.StateMachineSystem.BallAutoMoveState, Assembly-CSharp
+      Data: 15|TestZigZag.StateMachineSystem.BallAutoMoveState, Assembly-CSharp
     - Name: _onEnterTasks
-      Entry: 7
-      Data: 15|TestZigZag.Abstraction.Task[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: _onExitTasks
       Entry: 7
       Data: 16|TestZigZag.Abstraction.Task[], Assembly-CSharp
     - Name: 
@@ -520,18 +519,39 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: _onTurnTasks
+    - Name: _onExitTasks
       Entry: 7
       Data: 17|TestZigZag.Abstraction.Task[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _onTurnTasks
+      Entry: 7
+      Data: 18|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 2
     - Name: 
       Entry: 7
-      Data: 18|TestZigZag.Abstraction.CallBallTurnEvent, Assembly-CSharp
+      Data: 19|TestZigZag.Abstraction.CallBallTurnEvent, Assembly-CSharp
     - Name: _ball
       Entry: 10
       Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 20|TestZigZag.Abstraction.PlaySoundTask, Assembly-CSharp
+    - Name: _audioSource
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -549,7 +569,7 @@ MonoBehaviour:
       Data: 0
     - Name: _statsLabel
       Entry: 7
-      Data: 19|TestZigZag.Abstraction.StatsLabel, Assembly-CSharp
+      Data: 21|TestZigZag.Abstraction.StatsLabel, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -594,7 +614,7 @@ MonoBehaviour:
       Data: 
     - Name: _initialState
       Entry: 7
-      Data: 20|System.RuntimeType, mscorlib
+      Data: 22|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: TestZigZag.StateMachineSystem.IdleState, Assembly-CSharp
@@ -603,11 +623,11 @@ MonoBehaviour:
       Data: 
     - Name: _transitions
       Entry: 7
-      Data: 21|System.Collections.Generic.Dictionary`2[[System.Type, mscorlib],[TestZigZag.StateMachineSystem.Transition[],
+      Data: 23|System.Collections.Generic.Dictionary`2[[System.Type, mscorlib],[TestZigZag.StateMachineSystem.Transition[],
         Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 22|System.Collections.Generic.ObjectEqualityComparer`1[[System.Type,
+      Data: 24|System.Collections.Generic.ObjectEqualityComparer`1[[System.Type,
         mscorlib]], mscorlib
     - Name: 
       Entry: 8
@@ -620,7 +640,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 7
-      Data: 23|System.RuntimeType, mscorlib
+      Data: 25|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: TestZigZag.StateMachineSystem.PlayerInputMoveState, Assembly-CSharp
@@ -629,16 +649,16 @@ MonoBehaviour:
       Data: 
     - Name: $v
       Entry: 7
-      Data: 24|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
+      Data: 26|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 25|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
+      Data: 27|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
     - Name: _toState
       Entry: 7
-      Data: 26|System.RuntimeType, mscorlib
+      Data: 28|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: TestZigZag.StateMachineSystem.DeathState, Assembly-CSharp
@@ -647,13 +667,13 @@ MonoBehaviour:
       Data: 
     - Name: _conditions
       Entry: 7
-      Data: 27|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+      Data: 29|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 28|TestZigZag.StateMachineSystem.GroundedCondition, Assembly-CSharp
+      Data: 30|TestZigZag.StateMachineSystem.GroundedCondition, Assembly-CSharp
     - Name: _isNecessary
       Entry: 5
       Data: true
@@ -662,7 +682,7 @@ MonoBehaviour:
       Data: true
     - Name: _groundDetector
       Entry: 10
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 8
       Data: 
@@ -677,19 +697,19 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 29|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
+      Data: 31|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
     - Name: _toState
       Entry: 9
-      Data: 20
+      Data: 22
     - Name: _conditions
       Entry: 7
-      Data: 30|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+      Data: 32|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 31|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
+      Data: 33|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
     - Name: _isNecessary
       Entry: 5
       Data: true
@@ -722,28 +742,28 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 9
-      Data: 20
+      Data: 22
     - Name: $v
       Entry: 7
-      Data: 32|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
+      Data: 34|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 33|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
+      Data: 35|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
     - Name: _toState
       Entry: 9
-      Data: 23
+      Data: 25
     - Name: _conditions
       Entry: 7
-      Data: 34|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+      Data: 36|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 35|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
+      Data: 37|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
     - Name: _isNecessary
       Entry: 5
       Data: true
@@ -755,7 +775,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 36|TestZigZag.StateMachineSystem.GameModePlayerCondition, Assembly-CSharp
+      Data: 38|TestZigZag.StateMachineSystem.GameModePlayerCondition, Assembly-CSharp
     - Name: _isNecessary
       Entry: 5
       Data: true
@@ -776,10 +796,10 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 37|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
+      Data: 39|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
     - Name: _toState
       Entry: 7
-      Data: 38|System.RuntimeType, mscorlib
+      Data: 40|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: TestZigZag.StateMachineSystem.BallAutoMoveState, Assembly-CSharp
@@ -788,13 +808,13 @@ MonoBehaviour:
       Data: 
     - Name: _conditions
       Entry: 7
-      Data: 39|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+      Data: 41|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 40|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
+      Data: 42|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
     - Name: _isNecessary
       Entry: 5
       Data: true
@@ -806,7 +826,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 41|TestZigZag.StateMachineSystem.GameModeAiCondition, Assembly-CSharp
+      Data: 43|TestZigZag.StateMachineSystem.GameModeAiCondition, Assembly-CSharp
     - Name: _isNecessary
       Entry: 5
       Data: true
@@ -839,28 +859,28 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 9
-      Data: 26
+      Data: 28
     - Name: $v
       Entry: 7
-      Data: 42|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
+      Data: 44|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 43|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
+      Data: 45|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
     - Name: _toState
       Entry: 9
-      Data: 20
+      Data: 22
     - Name: _conditions
       Entry: 7
-      Data: 44|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+      Data: 46|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 45|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
+      Data: 47|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
     - Name: _isNecessary
       Entry: 5
       Data: true
@@ -893,28 +913,28 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 9
-      Data: 38
+      Data: 40
     - Name: $v
       Entry: 7
-      Data: 46|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
+      Data: 48|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 47|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
+      Data: 49|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
     - Name: _toState
       Entry: 9
-      Data: 26
+      Data: 28
     - Name: _conditions
       Entry: 7
-      Data: 48|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+      Data: 50|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 49|TestZigZag.StateMachineSystem.GroundedCondition, Assembly-CSharp
+      Data: 51|TestZigZag.StateMachineSystem.GroundedCondition, Assembly-CSharp
     - Name: _isNecessary
       Entry: 5
       Data: true
@@ -923,7 +943,7 @@ MonoBehaviour:
       Data: true
     - Name: _groundDetector
       Entry: 10
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 8
       Data: 
@@ -938,19 +958,19 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 50|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
+      Data: 52|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
     - Name: _toState
       Entry: 9
-      Data: 20
+      Data: 22
     - Name: _conditions
       Entry: 7
-      Data: 51|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+      Data: 53|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 52|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
+      Data: 54|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
     - Name: _isNecessary
       Entry: 5
       Data: true
@@ -986,7 +1006,7 @@ MonoBehaviour:
       Data: 
     - Name: _editorState
       Entry: 9
-      Data: 38
+      Data: 40
   _anyTransitions: []
 --- !u!114 &8294395188205989244
 MonoBehaviour:
@@ -1176,3 +1196,99 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: PlayerBall
   _object: {fileID: 8294395188205989247}
+--- !u!82 &2524613278962256349
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8294395188205989243}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3322934b2454abe4f8ed3f3af6adcb85, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

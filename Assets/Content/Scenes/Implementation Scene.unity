@@ -527,7 +527,7 @@ MonoBehaviour:
       Data: 0|TestZigZag.StateMachineSystem.IState[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 7
       Data: 1|TestZigZag.StateMachineSystem.IdleState, Assembly-CSharp
@@ -664,6 +664,99 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 14|TestZigZag.StateMachineSystem.BallAutoMoveState, Assembly-CSharp
+    - Name: _onEnterTasks
+      Entry: 7
+      Data: 15|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _onExitTasks
+      Entry: 7
+      Data: 16|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _onTurnTasks
+      Entry: 7
+      Data: 17|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 18|TestZigZag.Abstraction.CallBallTurnEvent, Assembly-CSharp
+    - Name: _ball
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _ball
+      Entry: 10
+      Data: 1
+    - Name: _ballRigidbody
+      Entry: 10
+      Data: 0
+    - Name: _statsLabel
+      Entry: 7
+      Data: 19|TestZigZag.Abstraction.StatsLabel, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _scanFrequency
+      Entry: 4
+      Data: 0.1
+    - Name: _scanDistance
+      Entry: 4
+      Data: 0.75
+    - Name: _scanerHalfExtents
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.05
+    - Name: 
+      Entry: 4
+      Data: 0.1
+    - Name: 
+      Entry: 4
+      Data: 0.05
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _groundMask
+      Entry: 7
+      Data: UnityEngine.LayerMask, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 64
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -671,7 +764,7 @@ MonoBehaviour:
       Data: 
     - Name: _initialState
       Entry: 7
-      Data: 14|System.RuntimeType, mscorlib
+      Data: 20|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: TestZigZag.StateMachineSystem.IdleState, Assembly-CSharp
@@ -680,24 +773,24 @@ MonoBehaviour:
       Data: 
     - Name: _transitions
       Entry: 7
-      Data: 15|System.Collections.Generic.Dictionary`2[[System.Type, mscorlib],[TestZigZag.StateMachineSystem.Transition[],
+      Data: 21|System.Collections.Generic.Dictionary`2[[System.Type, mscorlib],[TestZigZag.StateMachineSystem.Transition[],
         Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 16|System.Collections.Generic.ObjectEqualityComparer`1[[System.Type,
+      Data: 22|System.Collections.Generic.ObjectEqualityComparer`1[[System.Type,
         mscorlib]], mscorlib
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 7
       Data: 
     - Name: $k
       Entry: 7
-      Data: 17|System.RuntimeType, mscorlib
+      Data: 23|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: TestZigZag.StateMachineSystem.PlayerInputMoveState, Assembly-CSharp
@@ -706,16 +799,16 @@ MonoBehaviour:
       Data: 
     - Name: $v
       Entry: 7
-      Data: 18|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
+      Data: 24|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 19|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
+      Data: 25|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
     - Name: _toState
       Entry: 7
-      Data: 20|System.RuntimeType, mscorlib
+      Data: 26|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: TestZigZag.StateMachineSystem.DeathState, Assembly-CSharp
@@ -724,13 +817,13 @@ MonoBehaviour:
       Data: 
     - Name: _conditions
       Entry: 7
-      Data: 21|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+      Data: 27|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 22|TestZigZag.StateMachineSystem.GroundedCondition, Assembly-CSharp
+      Data: 28|TestZigZag.StateMachineSystem.GroundedCondition, Assembly-CSharp
     - Name: _isNecessary
       Entry: 5
       Data: true
@@ -754,79 +847,25 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 23|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
+      Data: 29|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
     - Name: _toState
       Entry: 9
-      Data: 14
+      Data: 20
     - Name: _conditions
       Entry: 7
-      Data: 24|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+      Data: 30|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 25|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
+      Data: 31|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
     - Name: _isNecessary
       Entry: 5
       Data: true
     - Name: _logicalNot
       Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 9
-      Data: 14
-    - Name: $v
-      Entry: 7
-      Data: 26|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 27|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
-    - Name: _toState
-      Entry: 9
-      Data: 17
-    - Name: _conditions
-      Entry: 7
-      Data: 28|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 29|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
-    - Name: _isNecessary
-      Entry: 5
       Data: true
-    - Name: _logicalNot
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
@@ -856,25 +895,232 @@ MonoBehaviour:
       Data: 20
     - Name: $v
       Entry: 7
-      Data: 30|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
+      Data: 32|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
-      Data: 31|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
+      Data: 33|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
     - Name: _toState
       Entry: 9
-      Data: 14
+      Data: 23
     - Name: _conditions
       Entry: 7
-      Data: 32|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+      Data: 34|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 35|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
+    - Name: _isNecessary
+      Entry: 5
+      Data: true
+    - Name: _logicalNot
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 36|TestZigZag.StateMachineSystem.GameModePlayerCondition, Assembly-CSharp
+    - Name: _isNecessary
+      Entry: 5
+      Data: true
+    - Name: _logicalNot
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 37|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
+    - Name: _toState
+      Entry: 7
+      Data: 38|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: TestZigZag.StateMachineSystem.BallAutoMoveState, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _conditions
+      Entry: 7
+      Data: 39|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 40|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
+    - Name: _isNecessary
+      Entry: 5
+      Data: true
+    - Name: _logicalNot
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 41|TestZigZag.StateMachineSystem.GameModeAiCondition, Assembly-CSharp
+    - Name: _isNecessary
+      Entry: 5
+      Data: true
+    - Name: _logicalNot
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 9
+      Data: 26
+    - Name: $v
+      Entry: 7
+      Data: 42|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 33|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
+      Data: 43|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
+    - Name: _toState
+      Entry: 9
+      Data: 20
+    - Name: _conditions
+      Entry: 7
+      Data: 44|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 45|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
+    - Name: _isNecessary
+      Entry: 5
+      Data: true
+    - Name: _logicalNot
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 9
+      Data: 38
+    - Name: $v
+      Entry: 7
+      Data: 46|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 47|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
+    - Name: _toState
+      Entry: 9
+      Data: 26
+    - Name: _conditions
+      Entry: 7
+      Data: 48|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 49|TestZigZag.StateMachineSystem.GroundedCondition, Assembly-CSharp
+    - Name: _isNecessary
+      Entry: 5
+      Data: true
+    - Name: _logicalNot
+      Entry: 5
+      Data: true
+    - Name: _groundDetector
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 50|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
+    - Name: _toState
+      Entry: 9
+      Data: 20
+    - Name: _conditions
+      Entry: 7
+      Data: 51|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 52|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
     - Name: _isNecessary
       Entry: 5
       Data: true
@@ -910,7 +1156,7 @@ MonoBehaviour:
       Data: 
     - Name: _editorState
       Entry: 9
-      Data: 20
+      Data: 38
   _anyTransitions: []
 --- !u!114 &400292848
 MonoBehaviour:

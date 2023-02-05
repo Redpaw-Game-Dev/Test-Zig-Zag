@@ -1000,7 +1000,7 @@ GameObject:
   - component: {fileID: 6747869582695773452}
   - component: {fileID: 6747869582695773450}
   - component: {fileID: 6747869582695773453}
-  - component: {fileID: 8976313048903936884}
+  - component: {fileID: 3258475570336821128}
   m_Layer: 5
   m_Name: Menu Button
   m_TagString: Untagged
@@ -1065,7 +1065,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8976313048903936884
+--- !u!114 &3258475570336821128
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -38,11 +38,27 @@ namespace TestZigZag.Game
             _inputManager.OnPlay += Play;
             _inputManager.OnSettings += ShowSettings;
             _inputManager.OnBackToMenu += ReturnToMenu;
+            _inputManager.OnSwitchMode += SwitchGameMode;
             
             _playerBall = objectsManager.GetObject<Ball>(gameConfig.PlayerBallId, GetBallCallback);
             if (_playerBall)
             {
                 _playerBall.OnDead += HandlePlayerDeath;
+            }
+        }
+
+        private void SwitchGameMode()
+        {
+            switch (_gameMode)
+            {
+                case GameMode.Player:
+                    _gameMode = GameMode.AI;
+                    break;
+                case GameMode.AI:
+                    _gameMode = GameMode.Player;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
         }
 
@@ -73,17 +89,18 @@ namespace TestZigZag.Game
             _uiManager.HideElement<MenuScreen>();
             await _uiManager.ShowElement<GameplayScreen>();
             _isGameStarted = true;
-            OnGameStarted.Invoke();
+            OnGameStarted?.Invoke();
         }
         
         private async void ReturnToMenu()
         {
+            _isGameStarted = false;
+            _uiManager.HideElement<SettingsScreen>();
             _uiManager.HideElement<PauseScreen>();
             _uiManager.HideElement<LoseScreen>();
-            _uiManager.HideElement<SettingsScreen>();
             await _uiManager.ShowElement<MenuScreen>();
             Time.timeScale = _defaultTimeScale;
-            OnReturnedToMenu.Invoke();
+            OnReturnedToMenu?.Invoke();
         }
 
         public async void Initialize()

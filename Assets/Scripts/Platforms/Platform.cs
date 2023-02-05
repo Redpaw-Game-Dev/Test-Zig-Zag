@@ -47,6 +47,7 @@ namespace TestZigZag.Platforms
             Vector3 targetPos = transform.position + Vector3.down * _fallingDistance;
             while (t < 1f)
             {
+                if (!_isFalling) return;
                 transform.position = Vector3.Lerp(startPos, targetPos, _fallingCurve.Evaluate(t));
                 t += Time.deltaTime / _fallingDuration;
                 await UniTask.Yield();
@@ -60,6 +61,11 @@ namespace TestZigZag.Platforms
             }
         }
 
+        public void Reset()
+        {
+            _isFalling = false;
+        }
+        
         public void Enable()
         {
             gameObject.SetActive(true);

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using TestZigZag.Game;
 using UnityEngine;
+using Zenject;
 using Random = UnityEngine.Random;
 
 namespace TestZigZag.Platforms
@@ -16,6 +18,7 @@ namespace TestZigZag.Platforms
         [SerializeField] private Platform _mainPlatform;
         [SerializeField] private Platform[] _preparedPlatforms = new Platform[0];
 
+        [Inject] private GameManager _gameManager;
         private List<Platform> _activePlatforms = new List<Platform>();
         private Queue<Platform> _pooledPlatforms = new Queue<Platform>();
         private int _passedCount;
@@ -50,19 +53,27 @@ namespace TestZigZag.Platforms
             _mainPlatform.Fall();
         }
 
-        [Button]
-        private void RespawnPlatforms()
+        public void ResetPassedCount()
         {
+            _passedCount = 0;
+        }
+        
+        [Button]
+        public void RespawnPlatforms()
+        {
+            _passedCount = 0;
             _currentBounds = _startBounds;
             _mainPlatform.transform.position = _mainPlatformStartPos;
             _mainPlatform.Enable();
             for (int i = 0; i < _activePlatforms.Count; i++)
             {
+                _activePlatforms[i].Reset();
                 Vector3 position = Vector3.zero;
                 if (i == 0) position = _firstPlatformStartPos;
                 else position = GetNextPosition(GetRandomDirection(), i - 1);
                 _activePlatforms[i].transform.position = position;
             }
+            _activePlatforms[0].OnPlayerEnterPlatform += HandlePlayerEnterFirstPlatform;
         }
         
         private void SpawnStartPlatforms()

@@ -1,12 +1,13 @@
 ﻿using System;
 using Cinemachine;
 using Sirenix.OdinInspector;
+using TestZigZag.Game;
 using TestZigZag.ObjectsManagement;
 using UnityEngine;
 using Zenject;
 using Object = UnityEngine.Object;
 
-namespace Abstraction.Specific.Behaviours
+namespace TestZigZag.Abstraction
 {
     public class CustomVCamBehaviour : SerializedMonoBehaviour
     {
@@ -27,11 +28,26 @@ namespace Abstraction.Specific.Behaviours
         public event Action<CustomVCamBehaviour> OnDeactivated;
                 
         [Inject]
-        protected void Construct(ObjectsManager objectsManager)
+        protected void Construct(ObjectsManager objectsManager, GameManager gameManager)
         {
             _targetTransform = objectsManager.GetObject<Transform>(_targetTransformId, GetTransformCallback);
         }
 
+        public void StartFollowing()
+        {
+            if (_targetTransform != null)
+            {
+                if (_setFollowTarget) _vCam.Follow = _targetTransform;
+                if (_setLookAtTarget) _vCam.LookAt = _targetTransform;
+            }
+        }
+
+        public void StopFollowing()
+        {
+            if (_setFollowTarget) _vCam.Follow = null;
+            if (_setLookAtTarget) _vCam.LookAt = null;
+        }
+        
         public void Activate()
         {
             if(_isActive) return;
@@ -56,11 +72,7 @@ namespace Abstraction.Specific.Behaviours
         private void GetTransformCallback(Object obj)
         {
             _targetTransform = (Transform)obj;
-            if (_targetTransform != null)
-            {
-                if (_setFollowTarget) _vCam.Follow = _targetTransform;
-                if (_setLookAtTarget) _vCam.LookAt = _targetTransform;
-            }
+            StartFollowing();
         }
     }
 }

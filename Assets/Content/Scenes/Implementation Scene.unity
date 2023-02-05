@@ -138,6 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 219923132}
   - component: {fileID: 219923131}
+  - component: {fileID: 219923133}
   m_Layer: 0
   m_Name: Platforms Controller
   m_TagString: Untagged
@@ -160,7 +161,7 @@ MonoBehaviour:
   _platformPrefab: {fileID: 2687216447422760083, guid: 59ef9c228567bee44b6aea236ac2b5a1, type: 3}
   _maxBounds: {x: 9, y: 9}
   _startBounds: {x: 6, y: 4}
-  _startCount: 49
+  _startCount: 40
   _passedBeforeFalling: 10
   _mainPlatform: {fileID: 1005062938}
   _preparedPlatforms:
@@ -181,6 +182,106 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &219923133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219923130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fa5fd14e8cc4c558385b4a4c190939e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 219923131}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _gameStartTasks
+      Entry: 7
+      Data: 0|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|TestZigZag.Abstraction.ResetPassedPlatformsTask, Assembly-CSharp
+    - Name: _platformsController
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _gameEndTasks
+      Entry: 7
+      Data: 2|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _gamePauseTasks
+      Entry: 7
+      Data: 3|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _gameContinuedTasks
+      Entry: 7
+      Data: 4|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _backToMenuTasks
+      Entry: 7
+      Data: 5|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 6|TestZigZag.Abstraction.RespawnPlatformsTask, Assembly-CSharp
+    - Name: _platformsController
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
 --- !u!1 &400292841
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,6 +297,8 @@ GameObject:
   - component: {fileID: 400292847}
   - component: {fileID: 400292846}
   - component: {fileID: 400292848}
+  - component: {fileID: 400292849}
+  - component: {fileID: 400292850}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -299,13 +402,34 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 4|TestZigZag.Abstraction.SpeedFeature, Assembly-CSharp
     - Name: _value
       Entry: 4
       Data: 120
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|TestZigZag.Abstraction.StartPositionFeature, Assembly-CSharp
+    - Name: _value
+      Entry: 7
+      Data: UnityEngine.Vector3, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0.01
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -407,6 +531,30 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|TestZigZag.StateMachineSystem.IdleState, Assembly-CSharp
+    - Name: _onEnterTasks
+      Entry: 7
+      Data: 2|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _onExitTasks
+      Entry: 7
+      Data: 3|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: _ballRigidbody
       Entry: 10
       Data: 0
@@ -415,7 +563,52 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 2|TestZigZag.StateMachineSystem.PlayerInputMoveState, Assembly-CSharp
+      Data: 4|TestZigZag.StateMachineSystem.PlayerInputMoveState, Assembly-CSharp
+    - Name: _onEnterTasks
+      Entry: 7
+      Data: 5|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _onExitTasks
+      Entry: 7
+      Data: 6|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _onTurnTasks
+      Entry: 7
+      Data: 7|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 8|TestZigZag.Abstraction.CallBallTurnEvent, Assembly-CSharp
+    - Name: _ball
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: _ball
       Entry: 10
       Data: 1
@@ -424,7 +617,7 @@ MonoBehaviour:
       Data: 0
     - Name: _statsLabel
       Entry: 7
-      Data: 3|TestZigZag.Abstraction.StatsLabel, Assembly-CSharp
+      Data: 9|TestZigZag.Abstraction.StatsLabel, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -433,7 +626,40 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 4|TestZigZag.StateMachineSystem.DeathState, Assembly-CSharp
+      Data: 10|TestZigZag.StateMachineSystem.DeathState, Assembly-CSharp
+    - Name: _onEnterTasks
+      Entry: 7
+      Data: 11|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 12|TestZigZag.Abstraction.CallBallDeathEvent, Assembly-CSharp
+    - Name: _ball
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _onExitTasks
+      Entry: 7
+      Data: 13|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -445,45 +671,51 @@ MonoBehaviour:
       Data: 
     - Name: _initialState
       Entry: 7
-      Data: 5|System.RuntimeType, mscorlib
+      Data: 14|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: TestZigZag.StateMachineSystem.IdleState, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _transitions
+      Entry: 7
+      Data: 15|System.Collections.Generic.Dictionary`2[[System.Type, mscorlib],[TestZigZag.StateMachineSystem.Transition[],
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 16|System.Collections.Generic.ObjectEqualityComparer`1[[System.Type,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: 17|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: TestZigZag.StateMachineSystem.PlayerInputMoveState, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
-    - Name: _transitions
+    - Name: $v
       Entry: 7
-      Data: 6|System.Collections.Generic.Dictionary`2[[System.Type, mscorlib],[TestZigZag.StateMachineSystem.Transition[],
-        Assembly-CSharp]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 7|System.Collections.Generic.ObjectEqualityComparer`1[[System.Type, mscorlib]],
-        mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
+      Data: 18|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 9
-      Data: 5
-    - Name: $v
-      Entry: 7
-      Data: 8|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 9|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
+      Data: 19|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
     - Name: _toState
       Entry: 7
-      Data: 10|System.RuntimeType, mscorlib
+      Data: 20|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
       Data: TestZigZag.StateMachineSystem.DeathState, Assembly-CSharp
@@ -492,13 +724,13 @@ MonoBehaviour:
       Data: 
     - Name: _conditions
       Entry: 7
-      Data: 11|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+      Data: 21|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 12|TestZigZag.StateMachineSystem.GroundedCondition, Assembly-CSharp
+      Data: 22|TestZigZag.StateMachineSystem.GroundedCondition, Assembly-CSharp
     - Name: _isNecessary
       Entry: 5
       Data: true
@@ -508,6 +740,39 @@ MonoBehaviour:
     - Name: _groundDetector
       Entry: 10
       Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 23|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
+    - Name: _toState
+      Entry: 9
+      Data: 14
+    - Name: _conditions
+      Entry: 7
+      Data: 24|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 25|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
+    - Name: _isNecessary
+      Entry: 5
+      Data: true
+    - Name: _logicalNot
+      Entry: 5
+      Data: false
     - Name: 
       Entry: 8
       Data: 
@@ -533,44 +798,89 @@ MonoBehaviour:
       Entry: 7
       Data: 
     - Name: $k
-      Entry: 7
-      Data: 13|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: TestZigZag.StateMachineSystem.IdleState, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
+      Entry: 9
+      Data: 14
     - Name: $v
       Entry: 7
-      Data: 14|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
+      Data: 26|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 15|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
+      Data: 27|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
     - Name: _toState
       Entry: 9
-      Data: 5
+      Data: 17
     - Name: _conditions
       Entry: 7
-      Data: 16|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+      Data: 28|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 17|TestZigZag.StateMachineSystem.GroundedCondition, Assembly-CSharp
+      Data: 29|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
     - Name: _isNecessary
       Entry: 5
       Data: true
     - Name: _logicalNot
       Entry: 5
       Data: false
-    - Name: _groundDetector
-      Entry: 10
-      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 9
+      Data: 20
+    - Name: $v
+      Entry: 7
+      Data: 30|TestZigZag.StateMachineSystem.Transition[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 31|TestZigZag.StateMachineSystem.Transition, Assembly-CSharp
+    - Name: _toState
+      Entry: 9
+      Data: 14
+    - Name: _conditions
+      Entry: 7
+      Data: 32|TestZigZag.StateMachineSystem.Condition[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 33|TestZigZag.StateMachineSystem.GameStartedCondition, Assembly-CSharp
+    - Name: _isNecessary
+      Entry: 5
+      Data: true
+    - Name: _logicalNot
+      Entry: 5
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -600,7 +910,7 @@ MonoBehaviour:
       Data: 
     - Name: _editorState
       Entry: 9
-      Data: 13
+      Data: 20
   _anyTransitions: []
 --- !u!114 &400292848
 MonoBehaviour:
@@ -616,6 +926,130 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: PlayerTransform
   _object: {fileID: 400292843}
+--- !u!114 &400292849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400292841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fa5fd14e8cc4c558385b4a4c190939e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 400292847}
+    - {fileID: 400292845}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _gameStartTasks
+      Entry: 7
+      Data: 0|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|TestZigZag.Abstraction.TryChangeStateTask, Assembly-CSharp
+    - Name: _stateMachine
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _gameEndTasks
+      Entry: 7
+      Data: 2|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _gamePauseTasks
+      Entry: 7
+      Data: 3|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _gameContinuedTasks
+      Entry: 7
+      Data: 4|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _backToMenuTasks
+      Entry: 7
+      Data: 5|TestZigZag.Abstraction.Task[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 6|TestZigZag.Abstraction.TryChangeStateTask, Assembly-CSharp
+    - Name: _stateMachine
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 7|TestZigZag.Abstraction.PlaceBallAtStartTask, Assembly-CSharp
+    - Name: _ball
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+--- !u!114 &400292850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400292841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d1f516dc1b41a4bf6e5430aa246a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: PlayerBall
+  _object: {fileID: 400292845}
 --- !u!1 &410773991
 GameObject:
   m_ObjectHideFlags: 0
